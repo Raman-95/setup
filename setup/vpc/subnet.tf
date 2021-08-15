@@ -103,14 +103,14 @@ resource "aws_route_table" "PrivateRoutetable" {
 }
 resource "aws_route_table_association" "a3" {
   subnet_id      = aws_subnet.app_subnet1.id
-  route_table_id = aws_route_table.prirt.id
+  route_table_id = aws_route_table.PrivateRoutetable.id
 }
 
 resource "aws_route_table_association" "a5" {
   subnet_id      = aws_subnet.db_subnet1.id
-  route_table_id = aws_route_table.prirt.id
+  route_table_id = aws_route_table.PrivateRoutetable.id
 }
 resource "aws_route_table_association" "a6" {
   subnet_id      = aws_subnet.db_subnet2.id
-  route_table_id = aws_route_table.prirt.id
+  route_table_id = aws_route_table.PrivateRoutetable.id
 }
